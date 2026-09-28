@@ -1,0 +1,75 @@
+name: Bug report
+description: Report a problem with the extension or its documentation.
+title: "[Bug]: "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        This report will be public. Do not include credentials, proprietary projects,
+        customer information, internal URLs, or unreviewed logs/screenshots.
+        For suspected vulnerabilities, use the repository's security policy instead.
+        Search existing issues before submitting a new report.
+  - type: input
+    id: extension-version
+    attributes:
+      label: Extension version
+      description: Version of Infineon ModusToolbox for VS Code.
+    validations:
+      required: true
+  - type: input
+    id: vscode-version
+    attributes:
+      label: VS Code version
+    validations:
+      required: true
+  - type: input
+    id: operating-system
+    attributes:
+      label: Operating system and version
+      description: Include the processor architecture if known.
+    validations:
+      required: true
+  - type: input
+    id: modustoolbox-version
+    attributes:
+      label: ModusToolbox version
+      description: Enter not installed or not applicable if appropriate.
+    validations:
+      required: true
+  - type: input
+    id: board-device
+    attributes:
+      label: Board or device
+      description: Include the kit/device model if relevant; omit serial numbers.
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Steps to reproduce
+      description: Describe the steps and relevant settings, or identify the affected documentation page.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior
+      description: Include the error message if it is safe to share.
+    validations:
+      required: true
+  - type: textarea
+    id: diagnostics
+    attributes:
+      label: Sanitized diagnostics or additional context
+      description: Optional. Review logs and screenshots for sensitive information before attaching them.
+  - type: checkboxes
+    id: public-information
+    attributes:
+      label: Public information check
+      options:
+        - label: I have reviewed this report and its attachments and removed sensitive information.
+          required: true
