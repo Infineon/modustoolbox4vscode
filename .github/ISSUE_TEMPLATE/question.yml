@@ -1,0 +1,37 @@
+name: Question
+description: Ask about using the extension or understanding its documentation.
+title: "[Question]: "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Search existing issues and the documentation before asking a question.
+        Questions and attachments are public. Do not include credentials,
+        proprietary projects, customer information, or internal URLs.
+        For suspected vulnerabilities, use the repository's security policy instead.
+  - type: textarea
+    id: question
+    attributes:
+      label: Question
+      description: What would you like to know? Include relevant documentation links if available.
+    validations:
+      required: true
+  - type: textarea
+    id: context
+    attributes:
+      label: Context and what you have tried
+      description: Describe your goal and any documentation or steps you have already tried.
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: If relevant, include extension, VS Code, ModusToolbox and OS versions, and the kit/device model. Omit serial numbers.
+  - type: checkboxes
+    id: public-information
+    attributes:
+      label: Public information check
+      options:
+        - label: I have reviewed this question and its attachments and removed sensitive information.
+          required: true
