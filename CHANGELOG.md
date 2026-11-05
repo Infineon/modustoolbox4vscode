@@ -1,5 +1,20 @@
 # Change Log
 
+### 1.14.0
+
+#### Bug Fixes
+
+- Fixed Memory Usage accuracy for allocated sections, initialized load copies, reservations, and device-specific capacities, including alias/overlap handling, external-flash mapping, reserved-region addresses, regions with blank descriptions, and section names containing spaces
+- Fixed startup selecting an uninstalled Tools Version when its directory remains after uninstall; the extension now falls back to a valid installation while preserving valid saved selections
+- Fixed startup with valid custom tools paths and recovery from stale saved tools defaults
+- Fixed the Application tab remaining at "Loading Application" when a connected kit cannot be inspected by fw-loader
+
+### 1.12.1
+
+#### Bug Fixes
+
+- Fixed required software installation and upgrade suggestions to select the latest release available for the current operating system, preventing macOS-only releases such as Arm GNU Toolchain (GCC) from being offered on Windows
+
 ### 1.12.0
 
 #### Improvements
